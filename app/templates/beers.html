@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Here are some beers that you might enjoy</h3>
+    {% for beer in beers %}
+    <div><p>{{ beer.name }}</p></div>
+    {% endfor %}    
+{% endblock %}

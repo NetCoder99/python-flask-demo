@@ -1,0 +1,15 @@
+[
+  {
+      "author": {"username": "John"},
+      "body": "Beautiful day in Portland!"
+  },
+  {
+      "author": {"username": "Susan"},
+      "body": "The Avengers movie was so cool!"
+  },
+  {
+    "author": {"username": "George"},
+    "body": "Most Marvel movies are very good."
+}
+
+]
