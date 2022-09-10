@@ -2,16 +2,30 @@
 
 {% block content %}
   <hr />
-  {%if user.userName %}
+  <h5>Hi, {{ current_user.username }}!</h5>
+  {{ current_user.username }}
+
+  {%if current_user.username %} 
+    <span class="message">Hello there, {{ current_user.username }}!</span><br>
+    It's {{date.strftime("%A, %d %B, %Y at %X") }}. 
+  {% endif %}
+
+
+  {# 
+    <!-- {%if user.userName %}
     <span class="message">Hello there, {{ user.userName }}!</span><br>
     It's {{date.strftime("%A, %d %B, %Y at %X") }}. 
   {% else %}
     <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
-  {% endif %}
+  {% endif %} -->
+  #}
+
+
   <hr />
   {%if args %}
     <div class="bold">Args length:{{ args|length }}</div>
     {% include 'query_args.html' %}
   {% endif %}
   <hr />
-{% endblock %}
+
+  {% endblock %}

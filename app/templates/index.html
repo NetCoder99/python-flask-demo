@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h4 style="text-align:center">This is the secret: {{ secret }}</h4>
+    <h5>Hi, {{ current_user.username }}!</h5>
+    <!-- <h4 style="text-align:center">This is the secret: {{ secret }}</h4> -->
+
+
     <h4>Some other links:</h4>
     <div>Home: <a href="/">Home</a></div>
     <div>Index: <a href="/index">Index</a></div>
+    <div>Posts: <a href="/posts">Posts</a></div>
+
     <div>Hello Friend: <a href="/hello">Friend</a></div>
     <div>Hello John: <a href="/hello/John">John</a></div>
     <div>Table Test 1: <a href="/hello/John?qry001=test&qry002=test2">Table Test 1</a></div>
