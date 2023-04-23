@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr />
+  <h5>This is the about page!</h5>
+
+  {%if args %}
+    <div class="bold">Args length:{{ args|length }}</div>
+    {% include 'query_args.html' %}
+  {% endif %}
+  <hr />
+
+{% endblock %}
