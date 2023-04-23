@@ -3,14 +3,14 @@
 }
 
 .body_adjust{
-  padding-left:75px;
+  padding-left:125px;
   padding-top:10px;
 }
 /* Create a top navigation bar with a black background color  */
 .topnav {
   background-color: #111; /* Black */
   overflow: hidden;
-  padding-left: 65px;
+  padding-left: 95px;
 }
 
 /* Style the links inside the navigation bar */

@@ -1,14 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <hr />
-  <h5>This is the Login page!</h5>
+<div class="tab-content d-flex justify-content-center">
+    <div class="text-center mb-3 border border border-2 rounded w-75 p-5 bg-white">
+        <h3>Please sign in:</h3>
+        <div class="box">
+            <form action="/login" method="post">
+                <div class="field">
+                    <div class="control mt-2 w-100">
+                        <input class="input"
+                               type="text"
+                               name="username"
+                               placeholder="User Id"
+                               autofocus="">
+                    </div>
+                </div>
 
-  <hr />
-  {%if args %}
-    <div class="bold">Args length:{{ args|length }}</div>
-    {% include 'query_args.html' %}
-  {% endif %}
-  <hr />
+                <div class="field">
+                    <div class="control mt-2 w-100">
+                        <input class="input"
+                               type="password"
+                               name="password"
+                               placeholder="Password"
+                               autofocus="">
+                    </div>
+                </div>
 
+                <div class="field">
+                    <div class="control mt-2 w-100">
+                        <input class="input"
+                               type="submit"
+                               name="btn_login"
+                               value="Login">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control mt-2 w-100">
+                        <span style="margin-top: 15px; padding: 5px;" class="alert alert-danger ">
+                        {{error}}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field w-75">
+                    <div class="control mt-2">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

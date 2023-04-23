@@ -1,5 +1,7 @@
-import os
 from flask         import Flask
+
+from about.routes import about_bp
+from auth.routes import auth_bp
 from config        import Config
 from flask_migrate import Migrate
 
@@ -17,4 +19,5 @@ login.login_view = 'login'
 
 appRoutes.init_app(app)
 
-from app.models import User, Post, BeerDetails
+app.register_blueprint(about_bp)
+app.register_blueprint(auth_bp)

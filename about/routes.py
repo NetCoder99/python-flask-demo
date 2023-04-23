@@ -8,4 +8,4 @@ about_bp = Blueprint(
 
 @about_bp.route('/about')   # Focus here
 def about_home():
-    return render_template('login.html', title='About')
+    return render_template('about.html', title='About')
